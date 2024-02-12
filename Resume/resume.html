@@ -8,7 +8,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- custom css -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./CSS/main.css">
+  <link rel="stylesheet" href="./CSS/print.css">
+  <link rel="stylesheet" href="./CSS/navbar.css">
+  <link rel="stylesheet" href="./CSS/templates.css">
 </head>
 
 <body>
@@ -16,7 +19,7 @@
     <div class="container">
       <div class="navbar-content">
         <div class="brand-and-toggler">
-          <a href="" class="navbar-brand">
+          <a href="../index.html" class="navbar-brand">
             <h3>.resumeBUILD</h3>
           </a>
           <button type="button" class="navbar-toggler-btn">
@@ -30,8 +33,8 @@
       </div>
     </div>
   </nav>
-  <div class="maincontainer">
-    <section id="about-sc" class="">
+  <div class="main-container">
+    <section id="about-sc" class="about-sc">
       <div class="container">
         <div class="about-cnt">
           <form action="" class="cv-form" id="cv-form">
@@ -316,54 +319,95 @@
       </div>
     </section>
     <section id="preview-sc" class="print_area">
-      <div class="resume-card">
-        <div class="head">
-          <div class="img-div">
-            <img src="" alt="">
-          </div>
-          <div class="uppertags">
-            <div class="title-div">
-              <h2 class="name"></h2>
-              <h3 class="designation"></h3>
+      <div class="container">
+        <div class="preview-cnt">
+          <div class="preview-cnt-l bg-green text-white">
+            <div class="preview-blk">
+              <div class="preview-image">
+                <img src="" alt="" id="image_dsp">
+              </div>
+              <div class="preview-item preview-item-name">
+                <span class="preview-item-val fw-6" id="fullname_dsp"></span>
+              </div>
+              <div class="preview-item">
+                <span class="preview-item-val text-uppercase fw-6 ls-1" id="designation_dsp"></span>
+              </div>
             </div>
-            <div class="upper-info">
-              <span class="mobileno"></span>
-              <span class="email"></span>
-              <span class="address"></span>
+
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>about</h3>
+              </div>
+              <div class="preview-blk-list">
+                <div class="preview-item">
+                  <span class="preview-item-val" id="phoneno_dsp"></span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="email_dsp"></span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="address_dsp"></span>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-item-val" id="summary_dsp"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>skills</h3>
+              </div>
+              <div class="skills-items preview-blk-list" id="skills_dsp">
+                <!-- skills list here -->
+              </div>
             </div>
           </div>
-        </div>
-        <div class="summary">
-          <h3 class="title">Summary</h3>
-          <hr>
-          <p class="summaryp"></p>
-        </div>
-        <div class="experience">
-          <h3 class="title">Experience</h3>
-          <hr>
-          <div class="exp-info">
-            <h4 class="job-title"></h4>
-            <h4 class="Company-org"></h4>
-            <p class="description"></p>
-            <span class="date-st-end"></span>
+
+          <div class="preview-cnt-r bg-white">
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>Achievements</h3>
+              </div>
+              <div class="achievements-items preview-blk-list" id="achievements_dsp"></div>
+            </div>
+
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>educations</h3>
+              </div>
+              <div class="educations-items preview-blk-list" id="educations_dsp"></div>
+            </div>
+
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>experiences</h3>
+              </div>
+              <div class="experiences-items preview-blk-list" id="experiences_dsp"></div>
+            </div>
+
+            <div class="preview-blk">
+              <div class="preview-blk-title">
+                <h3>projects</h3>
+              </div>
+              <div class="projects-items preview-blk-list" id="projects_dsp"></div>
+            </div>
           </div>
         </div>
       </div>
-
     </section>
   </div>
-
-
-
-
 
   <section class="print-btn-sc">
     <div class="container">
       <button type="button" class="print-btn btn btn-primary" onclick="printCV()">Print CV</button>
+      <button type="button" class="print-btn btn btn-primary" onclick="generateCV()">Download PDF</button>
     </div>
   </section>
 
+  <div class="printera">
 
+  </div>
 
 
   <!-- jquery cdn -->
@@ -374,9 +418,12 @@
     integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- custom js -->
-  <script src="assets/js/script.js"></script>
+  <script src="./JS/app.js"></script>
   <!-- app js -->
-  <script src="./script.js"></script>
+  <script src="./JS/print.js"></script>
+  <script src="./JS/script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 </body>
 
 </html>
